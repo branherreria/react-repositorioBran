@@ -6,7 +6,7 @@ export default function ComponenteLista(props) {
   let claseLista = '';
   setElementClass();
   function setElementClass() {
-    props.prioridad;
+    claseLista = props.prioridad;
     if (props.done) {
       claseLista += ' el-done';
     } else {
