@@ -20,6 +20,6 @@ export function App() {
       <Lista titulo="Tareas de la casa" icono="♥" elementos={elementos1} />
       <Lista titulo="Lista de la compra" icono="✌" elementos={elementos2} />
       <Lista titulo="ToDos del curso" icono="🙌" elementos={elementos3} />
-    </div>
+    </div> 
   );
 }
