@@ -21,7 +21,9 @@ export function App() {
       <Lista titulo="Tareas de la casa" icono="♥" elementos={elementos1} />
       <Lista titulo="Lista de la compra" icono="✌" elementos={elementos2} />
       <ListaClase titulo="ListaClase" icono="😭" elementos={elementos3} />
-      <ListaClase titulo="Otra lista clase" icono="😭" elementos={elementos3} />
+      <ListaClase titulo="Otra lista clase" icono="🦩" elementos={elementos3} />
+      <ListaClase titulo="Ejercicio ListaClase" icono="🕋" elementos={elementos3} />
+      
     </div> 
   );
 }
