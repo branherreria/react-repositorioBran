@@ -4,6 +4,7 @@ import { PaginaListas } from './components/PaginaListas';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import {Home} from './components/Home';
 import {Perfil} from './components/Perfil';
+import {MenuItems} from './data/MenuItems';
 
 export function App() {
   return (
@@ -14,18 +15,17 @@ export function App() {
 
 
         <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-          <Link to="/listas">Lista de tareas</Link>
-          </li>
-          <li>
-            <Link to="/perfil">Perfil</Link>
-          </li>
+          {/* Forma 3: map (función flecha) */}
+          {MenuItems.map((item) => {
+            return (
+              <li key={item.id}>
+                <Link to={item.path}>{item.title}</Link>
+              </li>
+            );
+          })}
         </ul>
 
-        
+
       </nav>
 
       
