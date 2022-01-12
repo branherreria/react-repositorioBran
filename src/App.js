@@ -11,6 +11,8 @@ export function App() {
     <Router>
       <nav>
         <h1>Mi aplicación</h1>
+
+
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -22,6 +24,8 @@ export function App() {
             <Link to="/perfil">Perfil</Link>
           </li>
         </ul>
+
+        
       </nav>
 
       
