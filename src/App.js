@@ -1,29 +1,34 @@
 import React from 'react';
 
-import { Lista } from './components/Lista';
-import ListaClase from './components/ListaClase';
+import { PaginaListas } from './components/PaginaListas';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import {Home} from './components/Home';
+import {Perfil} from './components/Perfil';
 
 export function App() {
-  const elementos1 = [
-    { done: false, texto: 'Hacer la compra', prioridad: 'alta' },
-    { done: true, texto: 'Sacar al perro', prioridad: 'media' },
-  ];
-  const elementos2 = [
-    { done: false, texto: 'Tomates' },
-    { done: true, texto: 'Queso' },
-    { done: false, texto: 'Leche' },
-  ];
-  const elementos3 = [{ done: false, texto: 'Estudiar React.js' }];
-
   return (
-    <div>
-      <h1>Listas de tareas</h1>
-      <Lista titulo="Tareas de la casa" icono="♥" elementos={elementos1} />
-      <Lista titulo="Lista de la compra" icono="✌" elementos={elementos2} />
-      <ListaClase titulo="ListaClase" icono="😭" elementos={elementos3} />
-      <ListaClase titulo="Otra lista clase" icono="🦩" elementos={elementos3} />
-      <ListaClase titulo="Ejercicio ListaClase" icono="🕋" elementos={elementos3} />
+    
+    <Router>
+      <nav>
+        <h1>Mi aplicación</h1>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+          <Link to="/listas">Lista de tareas</Link>
+          </li>
+          <li>
+            <Link to="/perfil">Perfil</Link>
+          </li>
+        </ul>
+      </nav>
+
       
-    </div> 
+        <Route path="/" exact component={Home} />
+        <Route path="/perfil" component={Perfil} />
+        <Route path="/listas" component={PaginaListas} />
+      </Router>
+    
   );
 }
