@@ -12,12 +12,18 @@ export const DatosTablaCoches = [
     marca: 'Peugeot',
     modelo: 'Partner',
     color: 'rojo',
+    imagen:
+      'https://www.mercadoracing.org/imagenes-anuncios/26/419711/mitsubishi-evo-vii-rs.jpg',
+    descripción: 'Un coche genial',
   },
   {
     matricula: '1111 YES',
     marca: 'Hyundai',
     modelo: 'ix35',
     color: 'verde',
+    imagen:
+      'https://www.mercadoracing.org/imagenes-anuncios/26/419711/mitsubishi-evo-vii-rs.jpg',
+    descripción: 'Un coche genial',
   },
   {
     matricula: '2222 WOW',
@@ -33,5 +39,17 @@ export const DatosTablaCoches = [
     marca: 'Subaru',
     modelo: 'Impreza',
     color: 'azul',
+    imagen:
+      'https://www.mercadoracing.org/imagenes-anuncios/26/419711/mitsubishi-evo-vii-rs.jpg',
+    descripción: 'Un coche genial',
+  },
+  {
+    matricula: '4343 FHG',
+    marca: 'Toyota',
+    modelo: 'Supra MK IV',
+    color: 'Amarillo',
+    imagen:
+      'https://p4.wallpaperbetter.com/wallpaper/797/409/307/toyota-supra-drift-smoke-motion-blur-hd-black-and-yellow-toyota-supra-wallpaper-preview.jpg',
+    descripción: 'Is that a supra? sutututu',
   },
 ];

@@ -2,6 +2,7 @@ import { Home } from '../components/Home';
 import { PaginaListas } from '../components/PaginaListas';
 import { Perfil } from '../components/Perfil';
 import Coches from '../components/Coches';
+import Pilotos from '../components/Pilotos';
 
 export const MenuItems = [
   {
@@ -28,6 +29,12 @@ export const MenuItems = [
     title: 'Coches',
     component: Coches,
   },
+  {
+    id: 5,
+    path: '/pilotos',
+    title: 'Pilotos',
+    component: Pilotos,
+  }
 ];
 
 /*
