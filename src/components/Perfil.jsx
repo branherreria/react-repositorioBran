@@ -1,10 +1,9 @@
 import React from 'react';
-export function Perfil(){
+
+export function Perfil() {
   return (
-    
-    <div>
-      <h1> Página de perfil </h1>
+    <div className="main-site">
+      <h1>Página de perfil</h1>
     </div>
-    
-    )
+  );
 }

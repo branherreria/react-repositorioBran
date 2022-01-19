@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Lista } from './Lista';
+import Lista from './Lista';
 import ListaClase from './ListaClase';
 
 export function PaginaListas() {
@@ -16,14 +16,18 @@ export function PaginaListas() {
   const elementos3 = [{ done: false, texto: 'Estudiar React.js' }];
 
   return (
-    <div>
+    <div className="main-site">
       <h1>Listas de tareas</h1>
-      <Lista titulo="Tareas de la casa" icono="♥" elementos={elementos1} />
-      <Lista titulo="Lista de la compra" icono="✌" elementos={elementos2} />
-      <ListaClase titulo="ListaClase" icono="😭" elementos={elementos3} />
-      <ListaClase titulo="Otra lista clase" icono="🦩" elementos={elementos3} />
-      <ListaClase titulo="Ejercicio ListaClase" icono="🕋" elementos={elementos3} />
-      
-    </div> 
+      <Lista
+        titulo="Tareas de la casa (funciones)"
+        icono="♥"
+        elementos={elementos1}
+      />
+      <ListaClase
+        titulo="ToDos del curso (clases)"
+        icono="🙌"
+        elementos={elementos3}
+      />
+    </div>
   );
 }
