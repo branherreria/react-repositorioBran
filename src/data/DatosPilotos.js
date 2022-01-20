@@ -32,7 +32,7 @@ export const DatosTablaPilotos = [
     Equipo: 'Alpine F1 Team',
     imagen:
       'https://imgresizer.eurosport.com/unsafe/1200x0/filters:format(jpeg):focal(1356x647:1358x645)/origin-imgresizer.eurosport.com/2021/11/21/3258248-66682228-2560-1440.jpg',
-    descripción: '2 veces campeón del mundo de F1, bicampeón de las 24h de le Mans',
+    descripción: 'Bicampeón del mundo de F1 y bicampeón de las 24h de le Mans',
   },
   {
     Nombre: 'Carlos Sainz Jr.',

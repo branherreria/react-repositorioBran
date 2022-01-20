@@ -4,7 +4,22 @@ import { TitulosTablaPilotos, DatosTablaPilotos } from '../data/DatosPilotos';
 class Pilotos extends React.Component {
   constructor(props) {
     super(props);
+
   }
+
+  changeStateClicked(item){
+
+    this.setState({
+      NombrePulsado: item.Nombre,
+      EdadPulsado: item.Edad,
+      NacionalidadPulsado: item.Nacionalidad,
+      EquipoPulsado: item.Equipo,
+      ImagenPulsado: item.imagen,
+      DescripcionPulsado: item.descripción
+    });
+
+  }
+
   render() {
     return (
       <div className="main-site">
