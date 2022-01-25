@@ -12,12 +12,19 @@ class Home extends React.Component {
   }
 
   login() {
-    //this.setState({ user: 'Pepito', password: '1234' });
     this.setState({
       user: this.inputUser.current.value, 
       password: this.inputPassword.current.value
     });
-    localStorage.setItem('user', this.state.user);
+  }
+
+  componentDidUnmount(){
+
+    this.setState(
+      {user: localStorage.getItem('user'),
+       password: localStorage.getItem('password')}
+      );
+
   }
 
   render() {
@@ -62,5 +69,13 @@ class Home extends React.Component {
       );
     }
   }
+
+  componentDidUnmount(){
+
+    localStorage.setItem('user', this.state.user);
+    localStorage.setItem('password', this.state.password);
+
+  }
+
 }
 export default Home;
