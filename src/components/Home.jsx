@@ -1,15 +1,23 @@
 import React from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
+import FormSelect from 'react-bootstrap/esm/FormSelect';
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = { user: '', password: '' };
     this.login = this.login.bind(this);
+    this.inputUser = React.createRef();
+    this.inputPassword = React.createRef();
   }
 
   login() {
-    this.setState({ user: 'Pepito', password: '1234' });
+    //this.setState({ user: 'Pepito', password: '1234' });
+    this.setState({
+      user: this.inputUser.current.value, 
+      password: this.inputPassword.current.value
+    });
+    localStorage.setItem('user', this.state.user);
   }
 
   render() {
@@ -28,7 +36,7 @@ class Home extends React.Component {
             <Form>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Correo Electronico</Form.Label>
-                <Form.Control type="email" placeholder="Introduce tu correo" />
+                <Form.Control ref={this.inputUser} type="email" placeholder="Introduce tu correo" />
                 <Form.Text className="text-muted">
                   No compartiremos tu email con nadie NUNCA
                 </Form.Text>
@@ -37,6 +45,7 @@ class Home extends React.Component {
               <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Contraseña</Form.Label>
                 <Form.Control
+                  ref={this.inputPassword}
                   type="password"
                   placeholder="Introduce la palabrita mágica"
                 />
