@@ -9,29 +9,29 @@ export const TitulosTablaCoches = {
 export const DatosTablaCoches = [
   {
     matricula: '0000 LOL',
-    marca: 'Peugeot',
-    modelo: 'Partner',
-    color: 'rojo',
+    marca: 'BMW',
+    modelo: 'E30',
+    color: 'Negro',
     imagen:
-      'https://www.mercadoracing.org/imagenes-anuncios/26/419711/mitsubishi-evo-vii-rs.jpg',
+      'https://cdn.motor1.com/images/mgl/m6K7e/s1/bmw-e30-m3-by-redux.jpg',
     descripción: 'Un coche genial',
   },
   {
     matricula: '1111 YES',
-    marca: 'Hyundai',
-    modelo: 'ix35',
-    color: 'verde',
+    marca: 'Ford',
+    modelo: 'Mustang Shelby GT350',
+    color: 'Azul',
     imagen:
-      'https://www.mercadoracing.org/imagenes-anuncios/26/419711/mitsubishi-evo-vii-rs.jpg',
+      'https://cdn.motor1.com/images/mgl/0xg3n/s1/2019-ford-mustang-shelby-gt350.jpg',
     descripción: 'Un coche genial',
   },
   {
     matricula: '2222 WOW',
     marca: 'Mitshubishi',
     modelo: 'Evo 7',
-    color: 'blanco',
+    color: 'Amarillo',
     imagen:
-      'https://www.mercadoracing.org/imagenes-anuncios/26/419711/mitsubishi-evo-vii-rs.jpg',
+      'https://periodismodelmotor.com/wp-content/uploads/2018/01/Mitsubishi-Lancer-Evolution-VII.jpg',
     descripción: 'Un coche genial',
   },
   {
@@ -40,7 +40,7 @@ export const DatosTablaCoches = [
     modelo: 'Impreza',
     color: 'azul',
     imagen:
-      'https://www.mercadoracing.org/imagenes-anuncios/26/419711/mitsubishi-evo-vii-rs.jpg',
+      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/subaru-impreza-22b-sti-2-1595157204.jpg',
     descripción: 'Un coche genial',
   },
   {

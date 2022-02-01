@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
-import FormSelect from 'react-bootstrap/esm/FormSelect';
 
 class Home extends React.Component {
   constructor(props) {
@@ -13,22 +12,24 @@ class Home extends React.Component {
 
   login() {
     this.setState({
-      user: this.inputUser.current.value, 
-      password: this.inputPassword.current.value
+      user: this.inputUser.current.value,
+      password: this.inputPassword.current.value,
     });
   }
 
-  componentDidUnmount(){
-
-    this.setState(
-      {user: localStorage.getItem('user'),
-       password: localStorage.getItem('password')}
-      );
-
+  componentDidMount() {
+    this.setState({
+      user: localStorage.getItem('user'),
+      password: localStorage.getItem('password'),
+    });
   }
 
   render() {
-    if (this.state !== null && this.state.user !== null && this.state.user !== "") {
+    if (
+      this.state !== null &&
+      this.state.user !== null &&
+      this.state.user !== ''
+    ) {
       return (
         <div className="main-site">
           <h1>Bienvenido {this.state.user}!</h1>
@@ -38,30 +39,30 @@ class Home extends React.Component {
       return (
         <div className="main-site">
           <h1>Bienvenido!</h1>
-
           <Container>
             <Form>
               <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Correo Electronico</Form.Label>
-                <Form.Control ref={this.inputUser} type="email" placeholder="Introduce tu correo" />
-                <Form.Text className="text-muted">
-                  No compartiremos tu email con nadie NUNCA
-                </Form.Text>
+                <Form.Label>Nombre de usuario o email: </Form.Label>
+                <Form.Control
+                  type="email"
+                  placeholder="Usuario"
+                  ref={this.inputUser}
+                />
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Contraseña</Form.Label>
+                <Form.Label>Contraseña: </Form.Label>
                 <Form.Control
-                  ref={this.inputPassword}
                   type="password"
-                  placeholder="Introduce la palabrita mágica"
+                  placeholder="Contraseña"
+                  ref={this.inputPassword}
                 />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicCheckbox">
                 <Form.Check type="checkbox" label="Recordarme" />
               </Form.Group>
               <Button variant="primary" type="button" onClick={this.login}>
-                Submit
+                Login
               </Button>
             </Form>
           </Container>
@@ -70,12 +71,10 @@ class Home extends React.Component {
     }
   }
 
-  componentDidUnmount(){
-
+  componentWillUnmount() {
     localStorage.setItem('user', this.state.user);
     localStorage.setItem('password', this.state.password);
-
   }
-
 }
+
 export default Home;

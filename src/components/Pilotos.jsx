@@ -1,10 +1,12 @@
 import React from 'react';
+import uuid from 'react-uuid';
 import { Card, Container, Table, Row, Col } from 'react-bootstrap';
 import { TitulosTablaPilotos, DatosTablaPilotos } from '../data/DatosPilotos';
+
 class Pilotos extends React.Component {
   constructor(props) {
     super(props);
-
+    this.state = { selectedItem: DatosTablaPilotos[0] };
   }
 
   changeStateClicked(item){
@@ -19,6 +21,8 @@ class Pilotos extends React.Component {
     });
 
   }
+
+  
 
   render() {
     return (
@@ -39,7 +43,7 @@ class Pilotos extends React.Component {
                 <tbody>
                   {DatosTablaPilotos.map((item) => {
                     return (
-                      <tr>
+                      <tr onClick={() => this.changeSelected(item)}>
                         <td>{item.Nombre}</td>
                         <td>{item.Edad}</td>
                         <td>{item.Nacionalidad}</td>
