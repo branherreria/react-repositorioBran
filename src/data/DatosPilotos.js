@@ -50,6 +50,6 @@ export const DatosTablaPilotos = [
     Equipo: 'Alfa Romeo Racing',
     imagen:
       'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mercedes-w12-11-1614682043.jpg?crop=1xw:0.3332211376640862xh;center,top&resize=1200:*',
-    descripción: "Expiloto de Mercedes. Escudero de Hamilton. Sin él Hamilton no había hecho NA'",
+    descripción: "Expiloto de Mercedes. Escudero de Hamilton. Sin él Hamilton no había hecho NA' desde 2017",
   }
 ];

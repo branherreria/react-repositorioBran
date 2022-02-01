@@ -3,6 +3,7 @@ import { PaginaListas } from '../components/PaginaListas';
 import { Perfil } from '../components/Perfil';
 import Coches from '../components/Coches';
 import Pilotos from '../components/Pilotos';
+import Disney from '../components/Disney';
 
 export const MenuItems = [
   {
@@ -34,6 +35,12 @@ export const MenuItems = [
     path: '/pilotos',
     title: 'Pilotos',
     component: Pilotos,
+  },
+  {
+    id: 6,
+    path: '/disney',
+    title: 'Disney',
+    component: Disney,
   }
 ];
 
