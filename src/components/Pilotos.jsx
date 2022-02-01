@@ -9,20 +9,9 @@ class Pilotos extends React.Component {
     this.state = { selectedItem: DatosTablaPilotos[0] };
   }
 
-  changeStateClicked(item){
-
-    this.setState({
-      NombrePulsado: item.Nombre,
-      EdadPulsado: item.Edad,
-      NacionalidadPulsado: item.Nacionalidad,
-      EquipoPulsado: item.Equipo,
-      ImagenPulsado: item.imagen,
-      DescripcionPulsado: item.descripción
-    });
-
-  }
-
-  
+  changeSelected = (item) => {
+    this.setState({ selectedItem: item });
+  };
 
   render() {
     return (
@@ -31,7 +20,7 @@ class Pilotos extends React.Component {
         <Container>
           <Row>
             <Col lg={8} md={6}>
-              <Table responsive striped>
+              <Table responsive striped hover>
                 <thead>
                   <tr>
                     <th>{TitulosTablaPilotos.id}</th>
@@ -43,7 +32,10 @@ class Pilotos extends React.Component {
                 <tbody>
                   {DatosTablaPilotos.map((item) => {
                     return (
-                      <tr onClick={() => this.changeSelected(item)}>
+                      <tr
+                        key={uuid()}
+                        onClick={() => this.changeSelected(item)}
+                      >
                         <td>{item.Nombre}</td>
                         <td>{item.Edad}</td>
                         <td>{item.Nacionalidad}</td>
@@ -56,15 +48,16 @@ class Pilotos extends React.Component {
             </Col>
             <Col lg={4} md={6}>
               <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={DatosTablaPilotos[2].imagen} />
+                <Card.Img variant="top" src={this.state.selectedItem.imagen} />
                 <Card.Body>
                   <Card.Title>
-                    {DatosTablaPilotos[2].nombre} {DatosTablaPilotos[2].equipo}
+                    {this.state.selectedItem.Nombre}
                   </Card.Title>
                   <Card.Text>
-                    Piloto: {DatosTablaPilotos[2].Nombre}
-                    <p />
-                    {DatosTablaPilotos[2].descripción}
+                  {this.state.selectedItem.Nacionalidad}
+                  </Card.Text>
+                  <Card.Text>
+                    {this.state.selectedItem.descripción}
                   </Card.Text>
                 </Card.Body>
               </Card>
